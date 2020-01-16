@@ -47,7 +47,7 @@ if(isset($_POST["submit"]))
 
 <!-- Analyze -->
 <script type="text/javascript">
-    function processImage() {
+    function processImage(link) {
         var subscriptionKey = "c62e302874cb45f6890b0bb014a5028f";
         var uriBase =
             "https://lukmanlabvision.cognitiveservices.azure.com/vision/v2.0/analyze";
@@ -60,7 +60,9 @@ if(isset($_POST["submit"]))
         };
  
         // Display the image.
-        var sourceImageUrl = document.getElementById("inputImage").value;
+        var sourceImageUrl = link;
+        //console.log(sourceImageUrl);
+        //var sourceImageUrl = document.getElementById("inputImage").value;
         document.querySelector("#sourceImage").src = sourceImageUrl;
  
         // Make the REST API call.
@@ -82,6 +84,9 @@ if(isset($_POST["submit"]))
  
         .done(function(data) {
             // Show formatted JSON on webpage.
+           // console.log();
+            $('#isi').text(data['description']['captions'][0]['text']);
+
             $("#responseTextArea").val(JSON.stringify(data, null, 2));
         })
  
@@ -128,20 +133,17 @@ if(isset($_POST["submit"]))
                     $blob_list = $blobRestProxy->listBlobs($settings["container"]);
                     $blobs = $blob_list->getBlobs();
                 
-                    foreach($blobs as $blob)
-                    {
-                    //   echo $blob->getName().": ".$blob->getUrl()."<br />";
-                    echo '
+                    foreach($blobs as $blob){ ?>
                     <tbody>
                         <tr>
-                        <td>'.$blob->getName().'</td>
+                        <td><?php echo $blob->getName();?></td>
                         <td><input type="text" name="inputImage" id="inputImage"
-                        value="'.$blob->getUrl().'"/></td>
-                        <td><button onclick="processImage()">Analyze</button></td>
+                        value="<?php echo $blob->getUrl();?>"/></td>
+                        <td><button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button></td>
                         </tr>
                     </tbody>
-                    ';
-                    }
+                    
+                  <?php  }
                 } catch(ServiceException $e){
                     $code = $e->getCode();
                     $error_message = $e->getMessage();
@@ -154,6 +156,7 @@ if(isset($_POST["submit"]))
             Source image:
             <br>
             <img id="sourceImage" width="400" />
+            <span id="isi"></span>
         </div>
     </div>
     <hr>
