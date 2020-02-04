@@ -138,7 +138,7 @@ if(isset($_POST["submit"]))
                     <tbody>
                         <tr>
                         <td><?php echo $blob->getName();?></td>
-                        <td><?php echo $blob->getUrl();?>"/></td>
+                        <td><?php echo $blob->getUrl();?></td>
                         <td><button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button></td>
                         </tr>
                     </tbody>
@@ -153,22 +153,22 @@ if(isset($_POST["submit"]))
             </table>
 	    <br>
         </div>
-	<div class="row">
-     <div class="col-md-6>
-            Source image:
-            <br>
-            <img id="sourceImage" width="80%" />
-            <span id="isi"></span>
-     </div>
+	
     </div>
     <hr>
-    
+    <div class="row">
     <div class="col-md-6">
         <div id="jsonOutput">
            <h1>Response:</h1>
             <textarea id="responseTextArea" class="form-control" rows="20"></textarea>
         </div>
     </div>
+         <div class="col-md-6">
+            Source image:
+            <br>
+            <img id="sourceImage" width="400" />
+            <span id="isi"></span>
+        </div>
     </div>
 </body>
 </html>
