@@ -117,7 +117,7 @@ if(isset($_POST["submit"]))
   </form>
   <hr>
 
-  <h4>Total Files : <?php echo sizeof($result->getBlobs())?></h4>
+  <h4>List Images : </h4>
   <div class="row">
     <div class="table table-hover">
                 <table class="table">
@@ -153,16 +153,17 @@ if(isset($_POST["submit"]))
             </table>
 	    <br>
         </div>
-        <div id="imageDiv" style="width:420px; display:table-cell;">
+	<div class="row">
+     <div class="col-md-6>
             Source image:
             <br>
-            <img id="sourceImage" width="400" />
+            <img id="sourceImage" width="80%" />
             <span id="isi"></span>
-        </div>
+     </div>
     </div>
     <hr>
-    <div class="row">
-    <div class="col-6">
+    
+    <div class="col-md-6">
         <div id="jsonOutput">
            <h1>Response:</h1>
             <textarea id="responseTextArea" class="form-control" rows="20"></textarea>
