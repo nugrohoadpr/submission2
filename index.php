@@ -114,7 +114,7 @@ if(isset($_POST["submit"]))
     <input type="file" name="uploaded_file"></input>
     <input type="submit" name="submit" value="Upload"></input>
   </form>
-  <hr>
+  <br>
 
   <h4>List Images : </h4>
   <div class="row">
