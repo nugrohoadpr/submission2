@@ -48,9 +48,9 @@ if(isset($_POST["submit"]))
 <!-- Analyze -->
 <script type="text/javascript">
     function processImage(link) {
-        var subscriptionKey = "c62e302874cb45f6890b0bb014a5028f";
+        var subscriptionKey = "5b06272e4e244c05aa79ab667bcdc735";
         var uriBase =
-            "https://lukmanlabvision.cognitiveservices.azure.com/vision/v2.0/analyze";
+            "https://adibihakvision.cognitiveservices.azure.com/vision/v2.0/analyze";
  
         // Request parameters.
         var params = {
