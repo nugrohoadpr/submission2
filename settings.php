@@ -2,7 +2,7 @@
 $settings = array(
     "container" => "gambar",
     "protocol" => "https",
-    "account_name" => "lukmanlab1",
-    "account_key" => "DqN81023J6NFO+EiXMxlcFvAy2vTWpGFsC2fN1pVMoWxQVzVN1Pbw8caScNS1SuH1am+Cf8DjfCXlRqaTKZo8g=="
+    "account_name" => "adibihakapp",
+    "account_key" => "Ymv3HFig7SHGNP6x7ydG9oGKsqbzGONZjp20t3gNj6QAHWPBee0f8mpmTEFDaZOzqLFCtkwmV9UzuTx1Lp+HqQ=="
 );
 ?>
