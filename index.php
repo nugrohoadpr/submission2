@@ -117,8 +117,7 @@ if(isset($_POST["submit"]))
   </form>
   <hr>
 
-  <h2>Uploaded Images: </h2>
-  <p>Silahkan pilih gambar untuk di Analisa</p>  
+  <h4>Total Files : <?php echo sizeof($result->getBlobs())?></h4>
   <div class="row">
     <div class="table table-hover">
                 <table class="table">
@@ -139,15 +138,8 @@ if(isset($_POST["submit"]))
                     <tbody>
                         <tr>
                         <td><?php echo $blob->getName();?></td>
-                        <td><<?php echo $blob->getUrl();?>"/></td>
-                        <td>
-				<form action="" method="post">
-					<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
-					<input type="submit" name="submit" value="Analyze!" class="btn btn-primary">
-				</form>
-				
-				##<button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button>
-			</td>
+                        <td><?php echo $blob->getUrl();?>"/></td>
+                        <td><button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button></td>
                         </tr>
                     </tbody>
                     
