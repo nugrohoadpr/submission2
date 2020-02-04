@@ -159,12 +159,11 @@ if(isset($_POST["submit"]))
     <div class="col-md-6">
         <div id="jsonOutput">
            <h6>Response:</h6>
-            <textarea id="responseTextArea" class="form-control" rows="10"></textarea>
+            <textarea id="responseTextArea" class="form-control" rows="14"></textarea>
         </div>
     </div>
          <div class="col-md-6">
 		 <h6>Source image:</h6>
-            <br>
             <img id="sourceImage" width="90%" /><br>
             <span id="isi"></span>
         </div>
