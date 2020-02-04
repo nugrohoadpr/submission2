@@ -104,7 +104,7 @@ if(isset($_POST["submit"]))
 
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Imgae Analyzer</a>
+        <a class="navbar-brand" href="#">Image Analyzer</a>
     </nav>
     <br>
     
@@ -169,5 +169,7 @@ if(isset($_POST["submit"]))
             <span id="isi"></span>
         </div>
     </div>
+	<br>
+	<br>
 </body>
 </html>
