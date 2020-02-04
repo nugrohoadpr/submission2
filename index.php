@@ -108,14 +108,9 @@ if(isset($_POST["submit"]))
     </nav>
     <br>
     
-  <div class="mt-4 mb-2">
-			<form class="d-flex justify-content-lefr" action="" method="post" enctype="multipart/form-data">
-				<input type="file" name="uploaded_file" accept=".jpeg,.jpg,.png" required="">
-				<input type="submit" name="submit" value="Upload">
-			</form>
-		</div>
   <form enctype="multipart/form-data" action="" method="POST">
-    <h3>Upload your File:</h3>
+	  <p>Pilih Gambar yang ingin anda analisa, klik Upload </p>
+	  <p>Untuk Memulai proses analisa, klik <b>analyze</b> pada gambar yang ada dalam list dibawah </p>
     
     <input type="file" name="uploaded_file"></input>
     <input type="submit" name="submit" value="Upload"></input>
@@ -125,7 +120,7 @@ if(isset($_POST["submit"]))
   <h2>Uploaded Images: </h2>
   <p>Silahkan pilih gambar untuk di Analisa</p>  
   <div class="row">
-    <div class="col-6">
+    <div class="table table-hover">
                 <table class="table">
                     <thead>
                         <tr>
@@ -158,6 +153,7 @@ if(isset($_POST["submit"]))
                 }
             ?>
             </table>
+	    <br>
         </div>
         <div id="imageDiv" style="width:420px; display:table-cell;">
             Source image:
