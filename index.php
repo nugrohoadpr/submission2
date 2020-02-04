@@ -109,8 +109,7 @@ if(isset($_POST["submit"]))
     <br>
     
   <form enctype="multipart/form-data" action="" method="POST">
-	  <p>Pilih Gambar yang ingin anda analisa, klik Upload </p>
-	  <p>Untuk Memulai proses analisa, klik <b>analyze</b> pada gambar yang ada dalam list dibawah </p>
+	  <p>Pilih Gambar yang ingin anda analisa, klik Upload<br>Untuk Memulai proses analisa, klik <b>analyze</b> pada gambar yang ada dalam list dibawah </p>
     
     <input type="file" name="uploaded_file"></input>
     <input type="submit" name="submit" value="Upload"></input>
@@ -159,14 +158,14 @@ if(isset($_POST["submit"]))
     <div class="row">
     <div class="col-md-6">
         <div id="jsonOutput">
-           <h1>Response:</h1>
+           <h6>Response:</h6>
             <textarea id="responseTextArea" class="form-control" rows="20"></textarea>
         </div>
     </div>
          <div class="col-md-6">
-            Source image:
+		 <h6>Source image:</h6>
             <br>
-            <img id="sourceImage" width="400" />
+            <img id="sourceImage" width="400" /><br>
             <span id="isi"></span>
         </div>
     </div>
