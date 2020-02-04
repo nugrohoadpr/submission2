@@ -139,9 +139,15 @@ if(isset($_POST["submit"]))
                     <tbody>
                         <tr>
                         <td><?php echo $blob->getName();?></td>
-                        <td><input type="text" name="inputImage" id="inputImage"
-                        value="<?php echo $blob->getUrl();?>"/></td>
-                        <td><button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button></td>
+                        <td><<?php echo $blob->getUrl();?>"/></td>
+                        <td>
+				<form action="" method="post">
+					<input type="hidden" name="url" value="<?php echo $blob->getUrl()?>">
+					<input type="submit" name="submit" value="Analyze!" class="btn btn-primary">
+				</form>
+				
+				##<button onclick="processImage('<?php echo $blob->getUrl();?>')">Analyze</button>
+			</td>
                         </tr>
                     </tbody>
                     
