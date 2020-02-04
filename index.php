@@ -35,7 +35,7 @@ if(isset($_POST["submit"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Submission 2 - ACD</title>
+  <title>Image Analyzer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -104,9 +104,16 @@ if(isset($_POST["submit"]))
 
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Submission 2 - Azure Cloud Developer @ Computer Vision</a>
+        <a class="navbar-brand" href="#">Imgae Analyzer</a>
     </nav>
     <br>
+    
+  <div class="mt-4 mb-2">
+			<form class="d-flex justify-content-lefr" action="" method="post" enctype="multipart/form-data">
+				<input type="file" name="uploaded_file" accept=".jpeg,.jpg,.png" required="">
+				<input type="submit" name="submit" value="Upload">
+			</form>
+		</div>
   <form enctype="multipart/form-data" action="" method="POST">
     <h3>Upload your File:</h3>
     
